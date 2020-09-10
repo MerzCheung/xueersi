@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ming.zhang.crawler.mapper.XueersiMapper">
+
+    <insert id="save" parameterType="ming.zhang.crawler.entity.CurriculumEntity">
+        insert into xueersi (province, switch_grade, switch_subject, switch_type, terms, point, version,
+        labels, study_phases, difficulties, times, time_slots, concrete_time,
+        teacher, duration, rating, views, created_time)
+         values (#{province}, #{switchGrade}, #{switchSubject}, #{switchType}, #{terms}, #{point}, #{version},
+         #{labels}, #{studyPhases}, #{difficulties}, #{times}, #{timeSlots}, #{concreteTime},
+          #{teacher}, #{duration}, #{rating}, #{views}, NOW())
+    </insert>
+
+</mapper>
